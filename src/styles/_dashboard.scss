@@ -1,0 +1,113 @@
+.dashboard {
+	display: block;
+	width: 900px;
+	max-width: 96%;
+	margin: 0 auto;
+	.mainDashboardContent {
+		margin-top: 40px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+	}
+}
+
+.dashDisplay {
+	width: 180px;
+	height: 180px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 15px;
+	.points {
+		font-size: 34px;
+		font-weight: 700;
+	}
+	p {
+		margin: 0;
+	}
+	.dashIcon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 10px;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+	}
+}
+
+.pointDisplay {
+	color: rgb(9, 51, 76);
+	background: rgb(73, 165, 218);
+	.circleIconPoints {
+		background: rgb(22, 116, 171);
+		background: linear-gradient(
+			30deg,
+			rgba(22, 116, 171, 1) 11%,
+			rgb(73, 165, 218)
+		);
+	}
+}
+.connectsDisplay {
+	color: rgb(9, 76, 56);
+	background: rgb(73, 218, 196);
+	.circleIconConnects {
+		background: rgb(22, 116, 171);
+		background: linear-gradient(
+			30deg,
+			rgb(19, 119, 104) 11%,
+			rgb(73, 218, 196)
+		);
+	}
+}
+.connectsDisplay {
+	color: rgb(9, 76, 56);
+	background: rgb(73, 218, 196);
+	.circleIconConnects {
+		background: rgb(22, 116, 171);
+		background: linear-gradient(
+			30deg,
+			rgb(19, 119, 104) 11%,
+			rgb(73, 218, 196)
+		);
+	}
+}
+.connectsDisplay {
+	color: rgb(9, 76, 56);
+	background: rgb(73, 218, 196);
+	.circleIconConnects {
+		background: rgb(22, 116, 171);
+		background: linear-gradient(
+			30deg,
+			rgb(19, 119, 104) 11%,
+			rgb(73, 218, 196)
+		);
+	}
+}
+.eventDisplay {
+	color: rgb(55, 21, 94);
+	background: rgb(141, 73, 218);
+	.circleIconEvents {
+		background: rgb(22, 116, 171);
+		background: linear-gradient(30deg, rgb(66, 24, 114) 11%, rgb(141, 73, 218));
+	}
+}
+
+.connectDisplay {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 15px;
+	color: #fff;
+	background: rgb(143, 22, 171);
+	background: linear-gradient(
+		90deg,
+		rgba(143, 22, 171, 1) 11%,
+		rgba(255, 126, 238, 1) 100%
+	);
+}

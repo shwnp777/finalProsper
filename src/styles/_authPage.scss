@@ -1,0 +1,48 @@
+@mixin mobile {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
+.authContainer {
+	width: 100%;
+	padding-top: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 100px;
+	background-color: rgb(243, 243, 243);
+
+	.authForm {
+		width: 400px;
+		padding: 20px;
+		border-radius: 15px;
+		box-shadow: 10px 10px 34px 0px rgba(0, 0, 0, 0.15);
+		-webkit-box-shadow: 10px 10px 34px 0px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 10px 10px 34px 0px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+		background-color: #fff;
+		@include mobile {
+			width: 80%;
+		}
+		.formElements {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			justify-content: center;
+			gap: 25px;
+			.authButton {
+				background-color: rgb(47, 151, 174);
+			}
+		}
+	}
+	.heading-container {
+		h3 {
+			color: rgb(7, 96, 156);
+			font-size: 24px;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+	}
+}

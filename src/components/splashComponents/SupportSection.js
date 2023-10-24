@@ -7,19 +7,19 @@ import {
 
 const cards = [
   {
-    name: "Sales",
+    name: "Customer Support",
     description:
       "Consectetur vel non. Rerum ut consequatur nobis unde. Enim est quo corrupti consequatur.",
     icon: PhoneIcon,
   },
   {
-    name: "Technical Support",
+    name: "Business Support",
     description:
       "Quod possimus sit modi rerum exercitationem quaerat atque tenetur ullam.",
     icon: LifebuoyIcon,
   },
   {
-    name: "Media Inquiries",
+    name: "People Support",
     description:
       "Ratione et porro eligendi est sed ratione rerum itaque. Placeat accusantium impedit eum odit.",
     icon: NewspaperIcon,
@@ -85,7 +85,7 @@ const SupportSection = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-            Support center
+            A New Era of Business
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui

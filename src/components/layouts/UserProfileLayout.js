@@ -1,11 +1,25 @@
-import React from "react";
-import { Outlet } from "react-router";
+import React, { Fragment, useContext, useEffect } from "react";
+import { Outlet, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
+import UserNavigation from "../navigation/UserNavigation";
 
 const UserProfileLayout = () => {
+  let navigate = useNavigate();
+  const { currentUser } = useContext(AuthContext);
+
+  useEffect(() => {
+    if (!currentUser) {
+      navigate("/auth");
+    }
+  }, [currentUser, navigate]);
+
   return (
-    <div>
-      <Outlet />
-    </div>
+    <Fragment>
+      <UserNavigation />
+      <div className="p-7">
+        <Outlet />
+      </div>
+    </Fragment>
   );
 };
 

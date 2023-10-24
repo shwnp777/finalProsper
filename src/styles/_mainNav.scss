@@ -1,0 +1,22 @@
+.MainNav {
+	padding: 10px 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+	.logoDiv {
+		width: 150px;
+		img {
+			width: 100%;
+		}
+	}
+	.leftNavLinks {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+	}
+}

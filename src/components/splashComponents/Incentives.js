@@ -3,9 +3,9 @@ import React from "react";
 const Incentives = () => {
   const incentives = [
     {
-      name: "Free Shipping",
+      name: "Any Location",
       description:
-        "It's not actually free we just price it into the products. Someone's paying for it, and it's not us.",
+        "WeProsper is available in any location. Anywhere in the world.",
       imageSrc:
         "https://tailwindui.com/img/ecommerce/icons/icon-delivery-light.svg",
     },
@@ -17,7 +17,7 @@ const Incentives = () => {
         "https://tailwindui.com/img/ecommerce/icons/icon-chat-light.svg",
     },
     {
-      name: "Fast Shopping Cart",
+      name: "Shopping Experience",
       description:
         "Look how fast that cart is going. What does this mean for the actual experience? I don't know.",
       imageSrc:

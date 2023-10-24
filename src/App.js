@@ -1,40 +1,52 @@
 import { Fragment } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Profile from "./pages/dashboard/Profile";
 import NoMatch from "./pages/NoMatch";
-import Points from "./pages/dashboard/Points";
 import UserProfileLayout from "./components/layouts/UserProfileLayout";
 import BusinessLayout from "./components/layouts/BusinessLayout";
 import Account from "./pages/business/Account";
-import UserNavigation from "./components/navigation/UserNavigation";
 import Signin from "./pages/auth/Signin";
 import Signup from "./pages/auth/Signup";
+import Messages from "./pages/dashboard/Messages";
+import FAQ from "./pages/FAQ";
+import ProductGrid from "./components/products/ProductGrid";
+import MainLayout from "./components/layouts/MainLayout";
+import AddPoints from "./components/points/AddPoints";
+import AddBusiness from "./pages/business/AddBusiness";
+import VerifyUsers from "./pages/business/VerifyUsers";
 
 function App() {
   return (
     <Fragment>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route index element={<Home />} />
+        <Route path="/frequently-asked-questions" element={<FAQ />} />
 
-          <Route path="auth" element={<UserProfileLayout />}>
-            <Route index element={<Signin />} />
-            <Route path="sign-up" element={<Signup />} />
-            <Route path="*" element={<NoMatch />} />
-          </Route>
+        <Route path="auth" element={<MainLayout />}>
+          <Route index element={<Signin />} />
+          <Route path="sign-up" element={<Signup />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
 
-          <Route path="user" element={<UserProfileLayout />}>
-            <Route index element={<Profile />} />
-            <Route path="points" element={<Points />} />
-            <Route path="*" element={<NoMatch />} />
-          </Route>
-          <Route path="business" element={<BusinessLayout />}>
-            <Route index element={<Account />} />
-            <Route path="*" element={<NoMatch />} />
-          </Route>
-        </Routes>
-      </Router>
+        <Route path="user" element={<UserProfileLayout />}>
+          <Route index element={<Profile />} />
+          <Route path="products" element={<ProductGrid />} />
+          <Route path="points" element={<AddPoints />} />
+          <Route path="messages" element={<Messages />} />
+          <Route path="add-business" element={<AddBusiness />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+        <Route path="business/:id/" element={<BusinessLayout />}>
+          <Route path="account" element={<Account />} />
+          <Route path="verify" element={<VerifyUsers />} />
+          <Route path="edit" element={<VerifyUsers />} />
+          <Route path="points" element={<VerifyUsers />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+        {/* https://www.youtube.com/watch?v=k4mjF4sPITE */}
+      </Routes>
     </Fragment>
   );
 }
