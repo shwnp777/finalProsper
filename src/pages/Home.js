@@ -1,23 +1,26 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
 // import UserNavigation from "../components/navigation/UserNavigation";
 // import ActionCall from "../components/splashComponents/ActionCall";
 // import Incentives from "../components/splashComponents/Incentives";
 // import SupportSection from "../components/splashComponents/SupportSection";
-import MainNavigation from "../components/navigation/MainNavigation";
-import { AuthContext } from "./../context/AuthContext";
+import MainNavigation from '../components/navigation/MainNavigation';
+import { AuthContext } from './../context/AuthContext';
+import HomeHeader from '../components/splashComponents/HomeHeader';
 
 const Home = () => {
-  const { currentUser } = useContext(AuthContext);
-  console.log(currentUser);
-  return (
-    <div style={{}} className="">
-      <MainNavigation />
+	const { currentUser } = useContext(AuthContext);
 
-      {/* <SupportSection />
+	return (
+		<div>
+			<MainNavigation />
+			<div className='main-header'>
+				<HomeHeader />
+			</div>
+			{/* <SupportSection />
       <Incentives />
       <ActionCall /> */}
-    </div>
-  );
+		</div>
+	);
 };
 
 export default Home;

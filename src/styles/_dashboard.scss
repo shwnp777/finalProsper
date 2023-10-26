@@ -1,3 +1,9 @@
+@mixin mobile {
+	@media screen and (max-width: 480px) {
+		@content;
+	}
+}
+
 .dashboard {
 	display: block;
 	width: 900px;
@@ -110,4 +116,46 @@
 		rgba(143, 22, 171, 1) 11%,
 		rgba(255, 126, 238, 1) 100%
 	);
+}
+
+.main-header {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.home-header {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-image: url('../assets/balloon.jpg'); /* The image used */
+	width: calc(100% - 40px);
+	background-color: #cccccc; /* Used if the image is unavailable */
+	height: 500px; /* You must set a specified height */
+	background-position: center; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover;
+	padding: 20px;
+	border-radius: 15px;
+	color: #fff;
+	h1 {
+		font-weight: 600;
+		font-size: 1.5rem;
+	}
+	.right-side {
+		min-width: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		button {
+			width: 200px;
+		}
+	}
+	.left-side {
+		max-width: 700px;
+		min-width: 390px;
+	}
 }
