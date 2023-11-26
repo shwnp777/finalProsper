@@ -28,6 +28,11 @@ const firebaseConfig = {
 };
 console.log(firebaseConfig);
 
+const tangoConfig = {
+	tangoApiKey: `${process.env.REACT_APP_TANGO_API_KEY}`,
+	tangoDatabaseURL: `${process.env.REACT_APP_TANGO_DATABASE_URL}`
+};
+
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();

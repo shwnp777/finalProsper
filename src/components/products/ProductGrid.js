@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import getCatalog from "../TangoAPI/GetProductCatalog";
 
 const ProductGrid = () => {
   return (

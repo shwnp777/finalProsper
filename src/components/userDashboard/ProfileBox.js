@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const ProfileBox = ({ currentUser }) => {
+const ProfileBox = ({ currentUser }) => { 
+
   return (
     <div>
       <div
