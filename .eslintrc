@@ -1,0 +1,13 @@
+{"parserOptions": {
+    
+    "babelOptions": {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        
+      ],
+    },
+  },
+  "plugins": [
+    "@babel",
+  ],
+}

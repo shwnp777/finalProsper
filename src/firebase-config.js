@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
+
 import {
 	getAuth,
 	createUserWithEmailAndPassword,
@@ -32,6 +33,7 @@ const tangoConfig = {
 	tangoApiKey: `${process.env.REACT_APP_TANGO_API_KEY}`,
 	tangoDatabaseURL: `${process.env.REACT_APP_TANGO_DATABASE_URL}`
 };
+console.log(tangoConfig);
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
@@ -46,4 +48,5 @@ export {
 	signInWithEmailAndPassword,
 	sendPasswordResetEmail,
 	signOut,
+	tangoConfig
 };

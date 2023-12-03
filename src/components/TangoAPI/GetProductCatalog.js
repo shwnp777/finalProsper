@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import tangoConfig from "../../firebase-config";
+import { tangoConfig } from "../../firebase-config";
 
 
-const getCatalog = () => {
+const GetProductCatalog = () => {
   const [data, setData] = useState([]);
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      "Access-Control-Allow-Origin": "*",
       authorization:
         `Basic ${tangoConfig.tangoApiKey}`,
     }};
     useEffect( () => {
         const fetchData = async () =>{
-            const data = await fetch(`${tangoConfig.tangoDatabaseURL}catalogs?verbose=true&categoryIds=`,
+            const response = await fetch(`${tangoConfig.tangoDatabaseURL}/catalogs?verbose=true&categoryIds=`,
             options
           )
-            .then((response) => setData(data))
+            .then((response) => setData(response.data))
             .then((response) => console.log(response))
     }
-
+        fetchData()
     });
 
     return (
@@ -31,6 +30,6 @@ const getCatalog = () => {
     );
 };
 
-export default getCatalog;
+export default GetProductCatalog;
     
  
